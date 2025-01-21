@@ -1,5 +1,5 @@
 :root {
-    --cor-principal: #F2EADF;
+    --cor-principal: #e6dacb;
     --cor-secundaria: #887975;
     --cor-terciaria: #26160D;
     --cor-detalhe: #000000;
@@ -22,9 +22,9 @@ body {
     align-items: center;
     background-color: var(--cor-terciaria);
     justify-content: space-between;
-    width: 100%;
+    width: auto;
     height: 100px;
-    padding: 0 20px; 
+    padding-right: 8%; 
 }
 
 .navegacao__titulo {
@@ -32,6 +32,7 @@ body {
     color: var(--cor-principal);
     padding-left: 8%;
     font-family: "DM Serif Text", serif;
+    text-decoration: none;
 }
 
 .navegacao__categoria {
@@ -70,6 +71,18 @@ strong {
     text-align: center;
 }
 .principal__paragrafo {
+    font-size: 1rem;
+}
+.principal__about {
+    flex-direction: column-reverse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+.principal__paragrafo__about {
+    width: auto;
     font-size: 1.5rem;
 }
 
@@ -98,4 +111,60 @@ strong {
     width: 22%; /* Ajusta o tamanho das imagens para ficarem lado a lado */
     height: auto; /* Mantém a proporção das imagens */
     border-radius: 8px; /* (Opcional) Adiciona borda arredondada às imagens */
+}
+footer {
+    background-color: var(--cor-terciaria);
+    color: var(--cor-principal);
+    font-family: "DM Serif Text", serif;
+    font-size: 1.5rem;
+    width: auto;
+    text-align: center;
+    padding: 24px;
+    margin-top: 20px;
+}
+footer p a {
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+footer p a:hover {
+    color: var(--cor-secundaria);
+}
+@media (max-width: 1200px) {
+    .navegacao{
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: auto;
+     padding-left: 0;
+     padding-right: 0;
+   }
+   .navegacao__titulo{
+    font-size: 2.5rem;
+    padding-left: 0;
+    text-align: center;
+    margin-bottom: 20px;
+   }
+   .navegacao__categoria{
+    display: block;
+   
+    text-align: center;
+   }
+   .navegacao__link {
+    font-size: 1.2rem; 
+    justify-content: space-around;
+}
+   .cabecalho__menu{
+    justify-content: center;
+}
+    .principal{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+   .principal__artigo {
+    width: auto;
+   }
+   .principal__about {
+    padding: 5%;
+   }
 }
